@@ -10,7 +10,7 @@
     width:100vw;
     max-width:100%; /* verhindert, dass das Bild seitlich vom Scrollbalken verdeckt wird */
     object-fit: cover;
-    animation: zoomIn 8s ease;
+    animation: zoomIn 8s infinite ease;
 }
 
 @keyframes zoomIn{

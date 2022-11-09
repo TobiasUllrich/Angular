@@ -1,3 +1,36 @@
+   <!-- LOKALE INSTALLATION (PROJEKTEBENE):    npm install material-design-lite --save                          -->
+   <!-- LOKALE INSTALLATION (PROJEKTEBENE):    npm install bootstrap                                            -->
+   <!-- GLOBALE INSTALLATION ( g -> AUF COMPUTER):    npm install typescript -g    ODER   npm install -g typescript (weiter mit 'tsc script.ts --target es7')  -->
+   <!-- GLOBALE INSTALLATION ( g -> AUF COMPUTER):    npm install jsdoc -g    -->
+   <!-- GLOBALE INSTALLATION ( g -> AUF COMPUTER):    npm install sass -g    (weiter mit 'sass') -->
+
+   <!-- ANGULAR VORRAUSSETZUNGEN & INSTALLATIONSSCHRITTE -->
+   <!-- HTML, CSS & JavaSCript beherrschen (TypeScript nicht so wichtig) -->
+   <!-- Node.js & NodePackageManager installieren: -> Versionen gucken: node --version  ODER  npm --version -->
+   <!-- Angular CLI installieren: npm install -g @angular/cli -->
+   <!-- Neues Angular Projekt im Ordner "AngularHomepage" erstellen (!cmd als Administrator ausführen!): ng new AngularHomepage -->
+   <!-- google-publishing: N   ;   routing: Y   ;   scss: ENTER   ;   Wenns hängt dann "ENTER" oder "Zeichen Delete" drücken -->
+   <!-- FERTIG: Angular Projekt wurde erstellt! -->
+
+
+   <!-- STRUKTUR: -->
+   <!-- node_modules: vollgeladen -->
+   <!-- src: Quellcode-Dateien -> WICHTIGSTER ORDNER: "src/app" -->
+   <!-- .gitignore: Alles was nicht auf git hochgeladen wird ist mit "/" gekennzeichnet, z.B. node_mondules -->
+   <!-- package.json: listet alle benötigten libraries ("dependencies") auf; "npm install" installiert alles was hier gelistet ist, falls es noch nicht installiert wurde (package-lock.json) -->
+   <!-- package-lock.json: listet alle libraries ("dependencies") auf, die bereits installiert wurden -->
+   <!-- angular.json: System-Einstellungen von Angular -->
+   <!-- README.md: Zum lesen -->
+   <!-- Weitere Jsons: erstmal nicht wirklich wichtig -->
+   <!-- e2e-Ordner: Automatische Tests ausführen (wenn nicht vorhanden: ng e2e "AngularHP" ausführen) -->
+
+   <!-- STARTEN DER APP -->
+   <!-- Statt index.html mit Live-Server öffnen -> "ng serve --open" ausführen (!mit cmd als Administrator ausführen!) -->
+   <!-- ODER "ng serve --open" in VS-Code ausführen (vorher ng.ps1 unter C:\Users\Tobias\AppData\Roaming\npm löschen) -->
+
+
 <div class="slideshow-container">
-  <img class="img-slideshow" src="assets/img/1.jpg">
+  <!-- Jetzt Variablen im HTML-Code nutzbar -->
+  <!-- Jetzt If-Abfragen mit Variablen im HTML-Code nutzbar -->
+  <img *ngIf="showImage" class="img-slideshow" src="assets/img/{{ images[currentImage] }}">  
 </div>
