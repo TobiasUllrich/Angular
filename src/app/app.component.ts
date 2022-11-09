@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core'; //OnInit kommt aus der Angula
 export class AppComponent implements OnInit { // Unsere Componente implementiert OnInit
   // ************************************************ JAVASCRIPT CODE HIER ********************************************************************
   
-  images =['1.jpg','2.jpg','3.jpg']; //let nicht mehr nötig, d.h. man kann, aber muss es nicht weglassen
+  images = ['1.jpg','2.jpg','3.jpg']; //let nicht mehr nötig, d.h. man kann, aber muss es nicht weglassen
+  headlines = ['Bring astrology to the next level',
+               'Born to interpret',
+               'Graduated by KgS']; //let nicht mehr nötig, d.h. man kann, aber muss es nicht weglassen
   currentImage=0;
   showImage=true;
 
