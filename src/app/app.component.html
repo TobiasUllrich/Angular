@@ -12,7 +12,6 @@
    <!-- google-publishing: N   ;   routing: Y   ;   scss: ENTER   ;   Wenns hängt dann "ENTER" oder "Zeichen Delete" drücken -->
    <!-- FERTIG: Angular Projekt wurde erstellt! -->
 
-
    <!-- STRUKTUR: -->
    <!-- node_modules: vollgeladen -->
    <!-- src: Quellcode-Dateien -> WICHTIGSTER ORDNER: "src/app" -> Enthält HTML,SCSS,TS und Test-Datei -->
@@ -42,12 +41,22 @@
    <!-- Input-Parameter für eine Componente -->
    <!-- HTML-Element eine Klasse zuweisen, wenn Variable = true:   <div [class.darkLinks]="darkMode">    -->
    <!-- ts-File: @Input() darkMode=true & imports{} anpassen   DANN: Variable von außen übergeben ->  <app-menu [darkMode]="false"></app-menu> -->
-   <!--   -->
+   
+   <!-- HTML-Seite veröffentlichen  -->
+   <!-- 'ng build --configuration production' (früher: 'ng build --prod') -> Wandelt alles in kleine Dateien um! -->
+   <!-- dist-Ordner enthält dann unsere Seite mit allen Dateien die wir brauchen  -->
+   <!-- Web-Browser speichert JS & CSS-Dateien zwischen nach dem ersten Seiten-Aufruf bzw. Download vom Web-Server  -->
+   <!-- Komische Datei-Kürzel ändern sich mit jeder Seiten-Version, sodass der Datei-Server  -->
 
-<app-menu [darkMode]="router.url !== '/'"></app-menu> <!-- Componente bekommt die Variable darkMode übergeben (Variable ist true oder false je nachdem ob wir uns auf der Startseite befinden oder nicht)-->
+   <!-- Funktionen  -->
+   <!-- *ngIf="darkMode": Wenn Variable darkMode=true, dann wird das HTML-Element dargestellt  -->
+   <!-- [darkMode]="router.url !== '/'": Componente bekommt die Variable darkMode übergeben (Variable ist true oder false je nachdem ob wir uns auf der Startseite befinden oder nicht) -->
+   <!-- [class.container]="router.url !== '/'": DIV bekommt die Klasse container, aber nur wenn es nicht die Startseite ist-->
 
-<div [class.container]="router.url !== '/'"> <!-- DIV bekommt die Klasse container, aber nur wenn es nicht die Startseite ist-->
+
+<app-menu [darkMode]="router.url !== '/'"></app-menu> 
+
+<div [class.container]="router.url !== '/'"> 
    <router-outlet></router-outlet>
 </div>
-
 
