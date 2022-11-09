@@ -1,0 +1,28 @@
+h1{
+    margin-left: 50px;
+}
+
+.subsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-bottom: 25px;
+
+
+    h2 {
+        font-weight: 700;
+        font-size: 27px;  
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+}
+
+
+
+

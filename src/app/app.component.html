@@ -34,9 +34,20 @@
    <!-- KOMPONENTE LÖSCHEN -->
    <!-- Einfach Ordner & Bezüge löschen und die Eintragung in app.module.ts (Imports und Declarations) löschen -> server neu starten -->
 
+   <!-- ROUTE HINZUFÜGEN -->
+   <!-- Eintragung in app-routing.module.ts (Im Routes-Array) vornehmen und oben bei 'Import' -->
+   <!-- <router-outlet></router-outlet> in app.component.html  -> Leitet zur entsprechenden Route   -->
+   <!-- routerLink="/"   statt href="" -->
 
+   <!-- Input-Parameter für eine Componente -->
+   <!-- HTML-Element eine Klasse zuweisen, wenn Variable = true:   <div [class.darkLinks]="darkMode">    -->
+   <!-- ts-File: @Input() darkMode=true & imports{} anpassen   DANN: Variable von außen übergeben ->  <app-menu [darkMode]="false"></app-menu> -->
+   <!--   -->
 
-<app-menu></app-menu>
-<app-slideshow></app-slideshow>
+<app-menu [darkMode]="router.url !== '/'"></app-menu> <!-- Componente bekommt die Variable darkMode übergeben (Variable ist true oder false je nachdem ob wir uns auf der Startseite befinden oder nicht)-->
+
+<div [class.container]="router.url !== '/'"> <!-- DIV bekommt die Klasse container, aber nur wenn es nicht die Startseite ist-->
+   <router-outlet></router-outlet>
+</div>
 
 

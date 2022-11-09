@@ -1,12 +1,14 @@
-<header>
+<header [class.headerDark]="darkMode">
 
-    <img src="assets/img/KgS.png">
+    <img *ngIf="!darkMode" routerLink="/" src="assets/img/KgS.png">
+    <img *ngIf="darkMode" routerLink="/" src="assets/img/KgS.png">
 
-    <div>
-       <a href="#">Home</a>
-       <a href="#">Curriculum</a>
-       <a href="#">Projekte</a>
-       <a href="#">Impressum</a>
+    <div [class.darkLinks]="darkMode"> <!-- DIV bekommt die Klasse darkLinks, aber nur wenn die Variable darkMode=true ist-->
+       <a routerLink="/">Home</a>
+       <a routerLink="/data-protection">Data protection</a>
+       <!-- <a href="#">Curriculum</a>
+       <a href="#">Projects</a> -->
+       <a routerLink="/imprint">Imprint</a>
     </div>
 
 </header>
