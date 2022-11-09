@@ -1,0 +1,30 @@
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-left:120px;
+  padding-right:120px;
+
+  position:absolute;
+  right:0;
+  left:0;
+  height:80px;
+  z-Index:1;
+   
+  a{
+   color:white;
+   text-decoration: none;
+   margin-left: 32px;
+   font-weight:500;
+
+   &:hover{
+    color:rgba(255,255,255,0.8);
+   }
+   }
+
+}
+
+img{
+  height:50px;  
+}
+
