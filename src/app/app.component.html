@@ -45,8 +45,9 @@
    <!-- HTML-Seite veröffentlichen  -->
    <!-- 'ng build --configuration production' (früher: 'ng build --prod') -> Wandelt alles in kleine Dateien um! -->
    <!-- 'ng build --base-href="/todolist/"' erzeugt in der index.html des dist-Ordners folgendes: <base href="/todolist/index.html"> -->
-   <!-- Es gibt nur eine index.html und alle Unterseiten werden über JavaScript bei Aufruf neu gerendert -->
-   <!-- Angular-Routes funktionieren nicht: .htaccess auf die Oberste Ebene des FTP-Servers packen -->
+   <!-- Es gibt nur eine index.html (Single Page Application) und alle Unterseiten inkl. CSS werden über JavaScript bei Aufruf neu gerendert, ABER egal welche Unterseite aufgerufen wird es wird immer auf index.html weitergeleitet!!! -->
+   <!-- Damit die Weiterleitung auf Unterseiten (Angular-Routes) funktioniert: .htaccess auf die Oberste Ebene des FTP-Servers packen -->
+   <!-- Für mehrere Angular-Apps: Eine Domain + einen FTP-Server für jede Angular-App -->
    <!-- Web-Browser speichert JS & CSS-Dateien zwischen nach dem ersten Seiten-Aufruf bzw. Download vom Web-Server  -->
    <!-- Komische Datei-Kürzel ändern sich mit jeder Seiten-Version, sodass der Web-Browser immer weiß ob er eine aktuellere Datei vom Server laden muss -->
 
